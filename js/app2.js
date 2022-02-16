@@ -133,6 +133,5 @@ console.log(employeeResult);
 for (let i = 0; i < employeeResult.length; i++) { 
     employeeResult[i].calcSalary();// to calc salary for each employee 
     employeeResult[i].render();// to print in main for each employee 
-
-    
+ 
 }
