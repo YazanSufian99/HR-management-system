@@ -126,44 +126,22 @@ function renderSalayr(min,max){
 render();
 
 //  task 08 ----------------------------------------------------------------------
-
-var employeeSubmit=[]
-function Employeeform(employeeId,fullName,department,level,image){
-    this.employeeId=employeeId;
-    this.fullName=fullName;
-    this.department=department;
-    this.level= level; 
-    this.image=image; 
-    employeeSubmit.push(this);
-}
-
-// let btn = document.getElementById("submit");
-// btn.addEventListener("click", handelSubmit);
-
-// let nameLable =document.getElementById("name");
-// nameLable.addEventListener("click", handelSubmit);
-
-// let DepartmentLable =document.getElementById("Department");
-// DepartmentLable.addEventListener("click", handelSubmit);
-
-// let levelLable =document.getElementById("level");
-// levelLable.addEventListener("click", handelSubmit);
-
-// let imgLable =document.getElementById("img");
-// imgLable.addEventListener("click", handelSubmit);
- 
-// let form = document.getElementById("userForm").submit();
-// form.addEventListener("click",handelSubmit)
+let form=document.getElementById("userForm");
+form.addEventListener("click",handelSubmit);
 
 function handelSubmit(event){
     event.preventDefault();
-    let name=event.target.name.value;
-    let Department=event.target.Department.value;
-    let level=event.target.level.value;
-    let img=event.target.img.value;
-    console.log(name,Department,level,img);
-}
-function submitFunc(){
-    let a= document.getElementById("userForm").submit();
-    console.log(a)
+    let name= document.getElementById("name").value;
+    let img  =document.getElementById("img").value; 
+    var x = document.getElementById("Department").options.length;
+    for (let i = 0; i < x.length; i++) {
+        if (document.getElementById('Department') != null) {
+            str = document.getElementById("Department").value;
+        }
+        
+    }
+
+    
+    // document.getElementById("mySelect").options.item(0).text;
+    console.log(name,img,str) ;
 }
