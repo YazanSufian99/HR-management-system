@@ -40,17 +40,17 @@ let assest={
     //     return "correct a level"
     // }
 }
-
-var employeeResult=[]
-function Employee(employeeId,fullName,department,level,image){
-    this.employeeId=employeeId;
-    this.fullName=fullName;
-    this.department=department;
-    this.level= level; 
-    this.image=image; 
-    this.salary=0;
-    employeeResult.push(this);
-}
+// task 07
+// var employeeResult=[]
+// function Employee(employeeId,fullName,department,level,image){
+//     this.employeeId=employeeId;
+//     this.fullName=fullName;
+//     this.department=department;
+//     this.level= level; 
+//     this.image=image; 
+//     this.salary=0;
+//     employeeResult.push(this);
+// }
 
 
 function render(){
@@ -125,3 +125,45 @@ function renderSalayr(min,max){
 
 render();
 
+//  task 08 ----------------------------------------------------------------------
+
+var employeeSubmit=[]
+function Employeeform(employeeId,fullName,department,level,image){
+    this.employeeId=employeeId;
+    this.fullName=fullName;
+    this.department=department;
+    this.level= level; 
+    this.image=image; 
+    employeeSubmit.push(this);
+}
+
+// let btn = document.getElementById("submit");
+// btn.addEventListener("click", handelSubmit);
+
+// let nameLable =document.getElementById("name");
+// nameLable.addEventListener("click", handelSubmit);
+
+// let DepartmentLable =document.getElementById("Department");
+// DepartmentLable.addEventListener("click", handelSubmit);
+
+// let levelLable =document.getElementById("level");
+// levelLable.addEventListener("click", handelSubmit);
+
+// let imgLable =document.getElementById("img");
+// imgLable.addEventListener("click", handelSubmit);
+ 
+// let form = document.getElementById("userForm").submit();
+// form.addEventListener("click",handelSubmit)
+
+function handelSubmit(event){
+    event.preventDefault();
+    let name=event.target.name.value;
+    let Department=event.target.Department.value;
+    let level=event.target.level.value;
+    let img=event.target.img.value;
+    console.log(name,Department,level,img);
+}
+function submitFunc(){
+    let a= document.getElementById("userForm").submit();
+    console.log(a)
+}
