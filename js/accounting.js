@@ -139,6 +139,23 @@ function renderHedar(){
     tr.appendChild(empSlary);
 }
 
+function renderFooter(){
+    let tr =document.createElement("tr");
+    table.appendChild(tr);
+
+    let departmentName=document.createElement("th");
+    totlaRow.textContent=" total    ";
+    tr.appendChild(totlaRow);
+
+    let empNum=document.createElement("th");
+    empNum.textContent="  total num of employees her    ";
+    tr.appendChild(empNum);
+
+    let empSlary=document.createElement("th");
+    empSlary.textContent="  total Salary   ";
+    tr.appendChild(empSlary);
+}
+
 Employee.prototype.tableBody =function(){
 let tr=document.createElement("tr")
 table.appendChild(tr);

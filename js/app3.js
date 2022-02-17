@@ -46,7 +46,7 @@ Employee.prototype.calcSalary =function(){
         return "correct a level"
     }
     let salaryWithoutTax= renderSalayr(min,max);
- salary = salaryWithoutTax - salaryWithoutTax*0.075
+ this.salary = salaryWithoutTax - salaryWithoutTax*0.075
     // return this.salary;
 }
 
@@ -57,31 +57,31 @@ function renderSalayr(min,max){
 
 // ---------- calling start
 let GhaziSamer = new Employee("Ghazi Samer","Administration",
-"Senior","assest/1.jpg" );
+"Senior","../assest/1.jpg" );
 // GhaziSamer.getEmpId()
 
 let LanaAli = new Employee("Lana Ali","Finance",
-"Senior","assest/2.jpg " );
+"Senior","../assest/2.jpg " );
 // LanaAli.getEmpId();
 
 let TamaraAyoub = new Employee("Tamara Ayoub","Marketing",
-"Senior","assest/3.jpg" );
+"Senior","../assest/3.jpg" );
 // TamaraAyoub.getEmpId();
 
 let SafiWalid = new Employee("Safi Walid","Administration",
-"Mid-Senior","assest/4.jpg" );
+"Mid-Senior","../assest/4.jpg" );
 // SafiWalid.getEmpId();
 
 let OmarZaid = new Employee("Omar Zaid","Development",
-"Senior","assest/5.jpg" );
+"Senior","../assest/5.jpg" );
 // OmarZaid.getEmpId();
 
 let RanaSaleh = new Employee("Rana Saleh","Development",
-"Junior","assest/1.jpg" );
+"Junior","../assest/1.jpg" );
 // RanaSaleh.getEmpId();
 
 let HadiAhmad = new Employee("Hadi Ahmad","Finance",
-"Mid-Senior","assest/2.jpg" );
+"Mid-Senior","../assest/2.jpg" );
 
 // ---------- calling End
 userForm.addEventListener("submit",handelSubmit)
@@ -92,33 +92,36 @@ function handelSubmit(event){
   let department=event.target.Department.value;
   let level=event.target.level.value;
   let image=event.target.img.value;
-  allEmp.getEmpId();
-  allEmp.calcSalary();
+  let newEmp=new Employee(fullName,department,level,image);
+  newEmp.getEmpId();
+  newEmp.calcSalary();
+    
 //   console.log(fullName,department,level,image);
 //   let newEmployee = new Employee(fullName,department,level,image)
 //   console.log(newEmployee);
+    newEmp.showEmp();
   userForm.reset();
 }
 
 Employee.prototype.showEmp =function(){
-    let empDiv=document.createElement("div");
+    // let empDiv=document.createElement("div");
 
     let empImg=document.createElement("img");
-    empImg.setAttribute("scr",this.image);
+    empImg.setAttribute("src",this.image);
     empDiv.appendChild(empImg);
     
-    let EmpId=document.createElement("h4");
-    EmpId.textContent="Employee ID :"+this.EmpId;
-    empDiv.appendChild(EmpId);
+    let employeeId=document.createElement("h4");
+    employeeId.textContent="Employee ID :"+this.employeeId;
+    empDiv.appendChild(employeeId);
     
 
     let EmpName=document.createElement("h2");
     EmpName.textContent="Employee Name :"+this.fullName;
     empDiv.appendChild(EmpName);
     
-    let Department=document.createElement("h5");
-    Department.textContent="Employee Department :"+this.Department;
-    empDiv.appendChild(Department);
+    let department=document.createElement("h5");
+    department.textContent="Employee department :"+this.department;
+    empDiv.appendChild(department);
     
     let level=document.createElement("h5");
     level.textContent="Employee Department :"+this.level;
@@ -127,6 +130,7 @@ Employee.prototype.showEmp =function(){
     let salary=document.createElement("h5");
     salary.textContent=`${this.salary} $`;
     empDiv.appendChild(salary);
+    // newEmp.appendChild(empDiv);
 }
 
 function RenderEmp(){
@@ -134,7 +138,6 @@ function RenderEmp(){
         allEmp[i].getEmpId();    
         allEmp[i].calcSalary();
         allEmp[i].showEmp();
-     
     }
     console.log(allEmp)
 }
