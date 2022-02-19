@@ -56,32 +56,32 @@ function renderSalayr(min,max){
 // ---------- END calc salary
 
 // ---------- calling start
-let GhaziSamer = new Employee("Ghazi Samer","Administration",
-"Senior","../assest/1.jpg" );
-// GhaziSamer.getEmpId()
+// let GhaziSamer = new Employee("Ghazi Samer","Administration",
+// "Senior","../assest/1.jpg" );
+// // GhaziSamer.getEmpId()
 
-let LanaAli = new Employee("Lana Ali","Finance",
-"Senior","../assest/2.jpg " );
-// LanaAli.getEmpId();
+// let LanaAli = new Employee("Lana Ali","Finance",
+// "Senior","../assest/2.jpg " );
+// // LanaAli.getEmpId();
 
-let TamaraAyoub = new Employee("Tamara Ayoub","Marketing",
-"Senior","../assest/3.jpg" );
-// TamaraAyoub.getEmpId();
+// let TamaraAyoub = new Employee("Tamara Ayoub","Marketing",
+// "Senior","../assest/3.jpg" );
+// // TamaraAyoub.getEmpId();
 
-let SafiWalid = new Employee("Safi Walid","Administration",
-"Mid-Senior","../assest/4.jpg" );
-// SafiWalid.getEmpId();
+// let SafiWalid = new Employee("Safi Walid","Administration",
+// "Mid-Senior","../assest/4.jpg" );
+// // SafiWalid.getEmpId();
 
-let OmarZaid = new Employee("Omar Zaid","Development",
-"Senior","../assest/5.jpg" );
-// OmarZaid.getEmpId();
+// let OmarZaid = new Employee("Omar Zaid","Development",
+// "Senior","../assest/5.jpg" );
+// // OmarZaid.getEmpId();
 
-let RanaSaleh = new Employee("Rana Saleh","Development",
-"Junior","../assest/1.jpg" );
-// RanaSaleh.getEmpId();
+// let RanaSaleh = new Employee("Rana Saleh","Development",
+// "Junior","../assest/1.jpg" );
+// // RanaSaleh.getEmpId();
 
-let HadiAhmad = new Employee("Hadi Ahmad","Finance",
-"Mid-Senior","../assest/2.jpg" );
+// let HadiAhmad = new Employee("Hadi Ahmad","Finance",
+// "Mid-Senior","../assest/2.jpg" );
 
 // ---------- calling End
 userForm.addEventListener("submit",handelSubmit)

@@ -138,41 +138,60 @@ function renderHedar(){
     empSlary.textContent="  Employee Salary   ";
     tr.appendChild(empSlary);
 }
+// function Employee(employeeId,fullName,department,level,image){
+//     this.employeeId=employeeId;
+//     this.fullName=fullName;
+//     this.department=department;
+//     this.level= level; 
+//     this.image=image; 
+//     this.salary=0;
+//     employeeResult.push(this);
+// }
 
+// Employee.prototype.tableBody =function(){
+// let tr=document.createElement("tr")
+// table.appendChild(tr);
+
+// let namecell=document.createElement("td");
+// namecell.textContent=this.department
+// tr.appendChild(namecell);
+
+// let empCell=document.createElement("td");
+//     empCell.textContent=getEmpNum(employeeResult.level);
+//     tr.appendChild(empCell);
+
+// let salaryEmp=document.createElement("td");
+// salaryEmp.textContent=this.salary;
+// tr.appendChild(salaryEmp);
+// }
+
+//1 function to list department 
+// 
+console.log(employeeResult);
+let empnum =[];
+function gitEmpNum(){
+    for (let i = 0; i < employeeResult.length; i++) {
+        empnum = employeeResult.filter();
+        
+    }
+    console.log(empnum);
+}
+gitEmpNum();
 function renderFooter(){
     let tr =document.createElement("tr");
     table.appendChild(tr);
 
     let departmentName=document.createElement("th");
-    totlaRow.textContent=" total    ";
-    tr.appendChild(totlaRow);
+    departmentName.textContent=" total    ";
+    tr.appendChild(departmentName);
 
-    let empNum=document.createElement("th");
-    empNum.textContent="  total num of employees her    ";
-    tr.appendChild(empNum);
+    let emptotal=document.createElement("th");
+    emptotal.textContent="  total num of employees her    ";
+    tr.appendChild(emptotal);
 
-    let empSlary=document.createElement("th");
-    empSlary.textContent="  total Salary   ";
-    tr.appendChild(empSlary);
-}
-
-Employee.prototype.tableBody =function(){
-let tr=document.createElement("tr")
-table.appendChild(tr);
-
-let namecell=document.createElement("td");
-namecell.textContent=this.fullName;
-tr.appendChild(namecell);
-
-let idCell=document.createElement("td");
-    idCell.textContent=getEmpNum(employeeResult.level);
-    tr.appendChild(idCell);
-
-
-
-let salaryEmp=document.createElement("td");
-salaryEmp.textContent=this.salary;
-tr.appendChild(salaryEmp);
+    let salaryTotal=document.createElement("th");
+    salaryTotal.textContent="  total Salary   ";
+    tr.appendChild(salaryTotal);
 }
 
 function renderTableBody(){
@@ -203,4 +222,6 @@ function renderSalayr(min,max){
 
 renderHedar();
 render();
+
 renderTableBody();
+renderFooter();
