@@ -138,35 +138,24 @@ function renderHedar(){
     empSlary.textContent="  Employee Salary   ";
     tr.appendChild(empSlary);
 }
-// function Employee(employeeId,fullName,department,level,image){
-//     this.employeeId=employeeId;
-//     this.fullName=fullName;
-//     this.department=department;
-//     this.level= level; 
-//     this.image=image; 
-//     this.salary=0;
-//     employeeResult.push(this);
-// }
 
-// Employee.prototype.tableBody =function(){
-// let tr=document.createElement("tr")
-// table.appendChild(tr);
+Employee.prototype.tableBody =function(){
+let tr=document.createElement("tr")
+table.appendChild(tr);
 
-// let namecell=document.createElement("td");
-// namecell.textContent=this.department
-// tr.appendChild(namecell);
+let namecell=document.createElement("td");
+namecell.textContent=this.department
+tr.appendChild(namecell);
 
-// let empCell=document.createElement("td");
-//     empCell.textContent=getEmpNum(employeeResult.level);
-//     tr.appendChild(empCell);
+let empCell=document.createElement("td");
+    empCell.textContent=getEmpNum(employeeResult.level);
+    tr.appendChild(empCell);
 
-// let salaryEmp=document.createElement("td");
-// salaryEmp.textContent=this.salary;
-// tr.appendChild(salaryEmp);
-// }
+let salaryEmp=document.createElement("td");
+salaryEmp.textContent=this.salary;
+tr.appendChild(salaryEmp);
+}
 
-//1 function to list department 
-// 
 console.log(employeeResult);
 let empnum =[];
 function gitEmpNum(){
